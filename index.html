@@ -9,23 +9,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="solid"></div>
     <div class="apps">
       <div id="weather">
         <span></span>
+
         <span></span>
       </div>
-      <div class="above-margin"></div>
+
       <div class="main-column">
+        <h2 id="clock">00:00</h2>
         <form id="login-form" class="hidden">
           <input
             required
             maxlength="15"
             type="text"
-            placeholder=" what is your name?"
+            placeholder="      what is your name?"
+            style="color: white"
           />
+
           <button>log in</button>
         </form>
-        <h2 id="clock">00:00</h2>
+
         <h1 id="greeting" class="hidden"></h1>
       </div>
 
@@ -42,7 +47,7 @@
             <input
               required
               type="text"
-              placeholder="Write a to do and press enter"
+              placeholder="           Write schedule"
             />
           </form>
           <ul id="todo-list"></ul>

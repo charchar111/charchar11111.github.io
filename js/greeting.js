@@ -13,14 +13,15 @@ function onLoginSubmit(event) {
   loginForm.classList.add(CLASSNAME_HIDDEN);
   const userName = loginInput.value;
   localStorage.setItem(USERNAME_KEY, userName);
-  console.dir(localStorage.getItem(USERNAME_KEY));
-  console.dir(savedUsername);
+  greeting.innerText = `welcome ${userName} !`;
+
   paintGreetings(userName);
 }
 
 function paintGreetings(userNameValue) {
   greeting.innerText = `welcome ${userNameValue} !`;
   greeting.classList.remove(CLASSNAME_HIDDEN);
+  greeting.classList.add("visi");
 }
 
 if (savedUsername == null) {
@@ -29,24 +30,3 @@ if (savedUsername == null) {
 } else {
   paintGreetings(savedUsername);
 }
-
-//고치기 전
-
-//   loginForm.classList.remove(CLASSNAME_HIDDEN);
-
-//   /**please write your name*/
-//   function onLoginSubmit(event) {
-//     event.preventDefault();
-//     const userName = loginInput.value;
-//     localStorage.setItem(USERNAME_KEY, userName);
-//     loginForm.classList.add(CLASSNAME_HIDDEN);
-//     greeting.classList.remove(CLASSNAME_HIDDEN);
-//     greeting.innerText = `Hello ${userName}`;
-//     loginForm.addEventListener("submit", onLoginSubmit);
-//   }
-//   if (savedUsername == null) {  }
-
-// } else {
-//   greeting.innerText = `welcome ${savedUsername} !`;
-//   greeting.classList.remove(CLASSNAME_HIDDEN);
-// }
