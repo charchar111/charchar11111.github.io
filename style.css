@@ -1,0 +1,14 @@
+body {
+  height: 1000vh;
+}
+
+.hidden {
+  display: none;
+}
+
+#quote {
+}
+
+.bg-image {
+  top: 0px;
+}
